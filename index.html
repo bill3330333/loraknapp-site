@@ -5,62 +5,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exploration Travel Client Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .terms-box {
+      max-height: 150px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: #fff;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <img src="/logo.png" alt="Exploration Travel Boutique Logo" style="max-width: 300px; display: block; margin-bottom: 20px;" />
+
+  <img src="/logo.png" alt="Exploration Travel Boutique Logo" style="max-width: 300px; display: block; margin: 0 auto 30px;" />
 
   <form action="https://formspree.io/f/mpwrpyjq" method="POST">
     <label>
-      Full Name:<br>
+      Full Name:
       <input type="text" name="full-name" required>
-    </label><br><br>
+    </label>
 
     <label>
-      Email Address:<br>
+      Email Address:
       <input type="email" name="email" required>
-    </label><br><br>
+    </label>
 
     <label>
-      Destination of Interest:<br>
-      <input type="text" name="destination" required>
-    </label><br><br>
+      Phone Number:
+      <input type="tel" name="phone" required>
+    </label>
 
     <label>
-      Preferred Travel Month:<br>
-      <select name="travel-month" required>
-        <option value="">-- Please Choose --</option>
-        <option>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
+      Preferred Method of Contact:
+      <select name="contact-method" required>
+        <option value="">-- Select One --</option>
+        <option>Email</option>
+        <option>Phone</option>
+        <option>Text</option>
       </select>
-    </label><br><br>
+    </label>
 
     <label>
-      Number of Travelers:<br>
-      <input type="number" name="travelers" min="1" required>
-    </label><br><br>
+      Departure City:
+      <input type="text" name="departure-city" required>
+    </label>
+
+    <label>
+      Destination(s) of Interest:
+      <input type="text" name="destination" required>
+    </label>
+
+    <label>
+      Preferred Departure Date:
+      <input type="date" name="departure-date" required>
+    </label>
+
+    <label>
+      Return Date:
+      <input type="date" name="return-date" required>
+    </label>
+
+    <label>
+      Total Number of Travelers:
+      <input type="number" name="number-of-travelers" min="1" required>
+    </label>
+
+    <label>
+      Traveler Information (names, birthdates, etc.):
+      <textarea name="traveler-info" required></textarea>
+    </label>
+
+    <label>
+      Budget Range:
+      <input type="text" name="budget-range">
+    </label>
+
+    <label>
+      Special Requests / Notes:
+      <textarea name="special-requests"></textarea>
+    </label>
 
     <h3>Terms and Conditions</h3>
-    <div style="max-height: 150px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
-      <p>These are example terms and conditions. You can replace this text with your actual policy.</p>
-      <p>All deposits are non-refundable. Prices are subject to availability and change. By submitting this form, you agree that Exploration Travel Boutique is not responsible for any travel delays, cancellations, or changes due to weather, airlines, or third-party vendors.</p>
-    </div>
-
-    <label>
-      <input type="checkbox" name="terms" required>
-      I have read and agree to the Terms and Conditions.
-    </label><br><br>
-
-    <button type="submit">Submit</button>
-  </form>
-</body>
-</html>
+    <div class="terms-box">
+      <p>These are placeholder terms and conditions. Replace this text with your actual terms.</p>
+      <p>All deposits are non-refundable. Prices are subject to availability and change. Explora
