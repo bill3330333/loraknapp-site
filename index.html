@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exploration Travel Boutique - Trip Inquiry</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="img/logo.png" alt="Exploration Travel Boutique Logo" class="logo"/>
+    <h1>Travel Inquiry Form</h1>
+    <form action="https://formspree.io/f/mexample" method="POST">
+      <h2>Traveler Details</h2>
+      <input type="text" name="first_name" placeholder="First name*" required>
+      <input type="text" name="last_name" placeholder="Last name*" required>
+      <select name="heard_about" required>
+        <option value="">How did you hear about us?*</option>
+        <option value="Friend">From a friend</option>
+        <option value="Google">Google</option>
+        <option value="Social Media">Social Media</option>
+      </select>
+      <input type="text" name="referral_source" placeholder="Referral Source (if any)">
+      <input type="text" name="requested_agent" placeholder="Requested Agent">
+
+      <h2>Contact Information</h2>
+      <input type="email" name="email" placeholder="Email*" required>
+      <input type="tel" name="phone" placeholder="Phone number*" required>
+
+      <h2>Address</h2>
+      <input type="text" name="address1" placeholder="Address Line 1*" required>
+      <input type="text" name="address2" placeholder="Address Line 2">
+      <input type="text" name="city" placeholder="City*" required>
+      <input type="text" name="state" placeholder="State*" required>
+      <input type="text" name="zip" placeholder="Zip*" required>
+
+      <h2>Trip Details</h2>
+      <input type="date" name="departure" required>
+      <input type="date" name="return" required>
+      <input type="number" name="nights" placeholder="How many nights?" required>
+      <label>Are your dates flexible?*</label>
+      <label><input type="radio" name="flexible_dates" value="Yes" required> Yes</label>
+      <label><input type="radio" name="flexible_dates" value="No" required> No</label>
+
+      <label>Where do you want to go?*</label>
+      <label><input type="checkbox" name="destination" value="Universal Orlando"> Universal Orlando</label>
+      <label><input type="checkbox" name="destination" value="Universal Hollywood"> Universal Hollywood</label>
+
+      <label>What do you need included in your booking?*</label>
+      <label><input type="checkbox" name="booking_needs" value="Resort"> Resort</label>
+      <label><input type="checkbox" name="booking_needs" value="Park Tickets"> Park Tickets</label>
+      <label><input type="checkbox" name="booking_needs" value="Water Park"> Water Park</label>
+      <label><input type="checkbox" name="booking_needs" value="Express Pass"> Express Pass</label>
+      <label><input type="checkbox" name="booking_needs" value="Special Event Tickets"> Special Event Tickets</label>
+      <label><input type="checkbox" name="booking_needs" value="Transportation"> Transportation</label>
+      <label><input type="checkbox" name="booking_needs" value="Insurance"> Insurance</label>
+      <label><input type="checkbox" name="booking_needs" value="Photo Package"> Photo Package</label>
+      <label><input type="checkbox" name="booking_needs" value="Other"> Other</label>
+
+      <input type="text" name="resort_pref" placeholder="Resort Preference">
+      <input type="text" name="room_type" placeholder="Room type preference*">
+
+      <h2>Options</h2>
+      <input type="number" name="park_days" placeholder="How many park days?">
+      <label>What special events are you interested in?</label>
+      <label><input type="checkbox" name="special_events" value="Halloween Horror Nights"> Halloween Horror Nights</label>
+      <label><input type="checkbox" name="special_events" value="Other"> Other</label>
+      <textarea name="more_info" placeholder="More Information"></textarea>
+
+      <h2>Booking/Party Details</h2>
+      <input type="text" name="budget" placeholder="Total trip budget*">
+      <input type="text" name="departure_city" placeholder="Departure city">
+      <input type="number" name="travelers" placeholder="How many travelers?" required>
+      <textarea name="traveler_info" placeholder="Full names and birthdates of travelers*" required></textarea>
+      <textarea name="special_accommodations" placeholder="Any ADA or accessibility needs?*" required></textarea>
+
+      <h2>Special Occasion</h2>
+      <label><input type="checkbox" name="occasion" value="Birthday"> Birthday</label>
+      <label><input type="checkbox" name="occasion" value="Anniversary"> Anniversary</label>
+      <label><input type="checkbox" name="occasion" value="Destination Wedding"> Destination Wedding</label>
+      <label><input type="checkbox" name="occasion" value="Family Reunion"> Family Reunion</label>
+      <label><input type="checkbox" name="occasion" value="None"> None</label>
+      <label><input type="checkbox" name="occasion" value="Other"> Other</label>
+
+      <h2>Final Thoughts</h2>
+      <label>Preferred method of contact*</label>
+      <label><input type="checkbox" name="contact_method" value="Phone call"> Phone (call)</label>
+      <label><input type="checkbox" name="contact_method" value="Phone text"> Phone (text)</label>
+      <label><input type="checkbox" name="contact_method" value="Email"> Email</label>
+      <textarea name="final_comments" placeholder="Are we missing anything?"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
